@@ -1,11 +1,14 @@
-íº€ Flask Application Deployment on Kubernetes (k3s) using AWS EC2
-í³Œ Project Overview
+![CI](https://github.com/icollinss/k8s-flask/actions/workflows/ci.yml/badge.svg)
+
+
+ï¿½ï¿½ï¿½ Flask Application Deployment on Kubernetes (k3s) using AWS EC2
+ï¿½ï¿½ï¿½ Project Overview
 
 This project demonstrates how to containerize a simple Flask application and deploy it on a Kubernetes cluster (k3s) running on an AWS EC2 instance.
 
 The goal of this project is to showcase core DevOps concepts such as Docker, Kubernetes deployments, services, and application scaling â€” all using a cloud-based environment without relying on local machine admin privileges.
 
-í» ï¸ Technologies Used
+ï¿½ï¿½ï¿½ï¸ Technologies Used
 
 AWS EC2 â€“ Cloud compute instance
 
@@ -19,7 +22,7 @@ Flask â€“ Python web framework
 
 kubectl â€“ Kubernetes command-line tool
 
-í³‚ Project Structure
+ï¿½ï¿½ï¿½ Project Structure
 flask-k8s-project/
 â”œâ”€â”€ app.py
 â”œâ”€â”€ Dockerfile
@@ -33,7 +36,7 @@ The Flask application exposes a single endpoint:
 
 GET / â†’ returns a welcome message served from a Kubernetes-managed container.
 
-í·± Architecture Overview
+ï¿½ï¿½ï¿½ Architecture Overview
 
 A Flask app is packaged into a Docker image.
 
@@ -43,7 +46,7 @@ Kubernetes manages multiple replicas of the application pods.
 
 A NodePort Service exposes the application to the internet via the EC2 public IP.
 
-íº€ Setup & Deployment Steps
+ï¿½ï¿½ï¿½ Setup & Deployment Steps
 1ï¸âƒ£ Launch AWS EC2 Instance
 
 AMI: Ubuntu 22.04
@@ -92,9 +95,9 @@ http://<EC2_PUBLIC_IP>:30007
 
 Expected output:
 
-Hello from Kubernetes íº€
+Hello from Kubernetes ï¿½ï¿½ï¿½
 
-í³ˆ Scaling the Application
+ï¿½ï¿½ï¿½ Scaling the Application
 
 Kubernetes allows horizontal scaling with a single command:
 
@@ -105,7 +108,7 @@ Verify:
 
 kubectl get pods
 
-í·¹ Cleanup
+ï¿½ï¿½ï¿½ Cleanup
 
 To remove all Kubernetes resources:
 
@@ -115,7 +118,7 @@ kubectl delete -f deployment.yaml
 
 Stop the EC2 instance when not in use to avoid unnecessary costs.
 
-í¾¯ Key DevOps Concepts Demonstrated
+ï¿½ï¿½ï¿½ Key DevOps Concepts Demonstrated
 
 Containerization with Docker
 
@@ -127,7 +130,7 @@ Application scaling
 
 Infrastructure troubleshooting without local admin access
 
-í³„ Future Improvements
+ï¿½ï¿½ï¿½ Future Improvements
 
 Add CI/CD using GitHub Actions
 
@@ -145,7 +148,7 @@ Use Helm for deployment templating
 ![App Screenshot](screenshots/app.png)
 
 
-í±¤ Author
+ï¿½ï¿½ï¿½ Author
 
 Ian Collins
 Aspiring DevOps Engineer
